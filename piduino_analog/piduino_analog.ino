@@ -28,7 +28,7 @@
 
 #include <Wire.h>
 #include <EEPROM.h>
-#include "PIduino_header.h"
+#include "piduino_analog.h"
 
 // Dither locking (true) or direct fringe locking (false)?
 boolean ditherLocking = true;
