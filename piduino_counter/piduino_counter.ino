@@ -21,7 +21,7 @@
 #include <FreqCounter.h>          // read counter signals
 #include <Wire.h>                 // communicate with the DAC via I²C (two-wire interface)
 #include <EEPROM.h>               // write and read on the non-volatile memory
-#include "counterPI.h"            // header file with constant definitions
+#include "piduino_counter.h"      // header file with constant definitions
 
 long cycle = 0;                   // program cycle counter
 boolean debug = true;             // send debugging info over serial - may be removed later
