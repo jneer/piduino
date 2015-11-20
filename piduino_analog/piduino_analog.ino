@@ -12,8 +12,6 @@
   - implement (and solder) diode for high or low input voltages
   
   VERSION HISTORY:
-  version 1.3, .... .. ..
-    - 
   version 1.2, 2012-03-19
     - upgraded to Arduino 1.0: WProgram.h -> Arduino.h,
                                Wire.send() -> Wire.write()
@@ -32,8 +30,6 @@
 
 // Dither locking (true) or direct fringe locking (false)?
 boolean ditherLocking = true;
-// Counter input (true) or analog input (false)?
-boolean counterInput = true;
 
 // PI parameters
 char outputMode;
@@ -45,8 +41,6 @@ int setpoint;
 int aoBias;  // analog output bias
 int modDepth;
 int demodPhase;
-int cntPeriod; // counter integration period [ms]
-int frq5Vref; // counter frequency reference for maximum output voltage
 
 byte regist[17];
 
@@ -85,8 +79,6 @@ void loop() {
   modeCheck(false);             // check for mode button press, use true for simple (2 state) switch, false for 4 state
   
   if (triggered) {
-    if (counterInput) {
-      aiVal = counter.....
     aiVal = analogRead(PIN_AI);  // sample and hold 1.5 ADC clock cycles after initiation
     updateAo();                 // calculate and output analog signal
     triggered = false;
